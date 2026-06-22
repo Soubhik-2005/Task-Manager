@@ -392,27 +392,25 @@ input:focus{
     }
 
     .card {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-    }
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
 
-    .card-left,
-    .card-right {
-        width: 100%;
-    }
+.card-left {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .card-left {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .card-right {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
+.card-right {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
     .card p {
         font-size: 18px;
@@ -446,7 +444,17 @@ input:focus{
         font-size: 28px;
     }
 }
+.task-manager {
+    width: min(900px, 96%);
+}
 
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
 
 
 
