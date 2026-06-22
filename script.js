@@ -15,12 +15,17 @@ function ui(){
     cardArea.innerHTML ="";
     task.forEach((elem,idx)=>{
     cardArea.innerHTML += `<div class="card">
-            <p>${elem.input} ${elem.purpose}</p>
-            <div class="status">${elem.status} </div>
+        <div class="card-left">
+            <p>${elem.input} </p>
+            <p class="purpose-display">${elem.purpose}</p>
+            </div>
+            <div class="card-right">
+            <div class="${elem.status === "Pending"? "statusP" : "statusC"}">${elem.status} </div>
             <div class="btn">
-            <button onclick="completedfunc(${idx})" class="completed">Completed</button>
-            <button onclick="editfunc(${idx})" class="edit">Edit</button>
-            <button onclick="deletefunc(${idx})" class="delete">Delete</button>
+            <button onclick="completedfunc(${idx})" class="completed">✅</button>
+            <button onclick="editfunc(${idx})" class="edit">✍️</button>
+            <button onclick="deletefunc(${idx})" class="delete">❌</button>
+            </div>
             </div>
         </div>`;
 })
@@ -123,6 +128,8 @@ document.addEventListener("click",(e)=>{
                 updateDashboard();
         }
 })
+
+
 
 
 

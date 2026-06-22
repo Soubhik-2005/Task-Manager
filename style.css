@@ -18,14 +18,12 @@ html,body{
 
 }
 .task-manager{
-    
     min-height: 80%;
-    width: 50%;
+    width: min(750px, 95%);
     background-color: rgba(243, 233, 233, 0.471);
     gap: 10px;
     border-radius: 10px;
     overflow: hidden;
-    /* padding: 40px; */
 }
 h1{
     background-color: rgb(215, 249, 250);
@@ -48,8 +46,6 @@ h1{
     /* background-color: rgb(232, 223, 223); */
     display: flex;
     justify-content: space-around;
-    /* align-items: center; */
-    /* padding: 25px 35px; */
     border-radius:10px;
     box-shadow: 10px;
     gap: 20px;
@@ -100,20 +96,19 @@ p{
 .form{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
     gap: 15px;
     text-align: center;
     width: 50%;
     height: 70%;
-    /* background-color: beige; */
 }
 .form input{
     height: 80%;
     width: 100%;
     font-size: 28px;
     padding: 0px 10px;
-    
+    /* color: rgb(0, 145, 255); */
+    color: rgb(86, 206, 250);    
 }
 
 input::placeholder{
@@ -126,11 +121,15 @@ input::placeholder{
     width: 100%;
     font-size: 26px;
     padding: 10px 20px;
+    /* color: rgb(0, 145, 255); */
     color: rgb(133, 223, 255);
+
+    
 }
 
 select option{
-    color: rgb(133, 223, 255);
+    color: rgb(0, 145, 255);
+    
     padding: 10px 20px;
     font-size: 28px;
 
@@ -150,7 +149,7 @@ select option{
     margin-top: 10px;
 }
 .card{
-    height: 30%;
+    min-height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -159,7 +158,6 @@ select option{
     background-color: rgb(161, 225, 225);
     border-radius: 5px;
     margin-top: 10px;
-
 }
 .btn{
     display: flex;
@@ -170,7 +168,7 @@ select option{
     font-size: 28px;
 }
 .completed{
-    background-color: rgb(72, 246, 72);
+    background-color: rgba(76, 182, 76, 0.635);
     padding: 8px 10px;
     border-radius: 10px;
     border: none;
@@ -185,7 +183,7 @@ select option{
 
 }
 .delete{
-     background-color: rgb(246, 72, 72);
+     background-color: rgba(242, 111, 111, 0.612);
     padding: 8px 10px;
     border-radius: 10px;
     border: none;
@@ -234,10 +232,6 @@ input:focus{
 }
 
 .edit-form{
-    /* background-color: yellow; */
-    /* display: flex;
-    justify-content: center;
-    /* align-items: center; */
     text-align: center;
     width: 50%;
     height: 100%;
@@ -263,6 +257,8 @@ input:focus{
     font-size: 28px;
     padding: 0px 10px;
     margin-bottom: 10px;
+    color: rgb(0, 145, 255);
+
 }
 
 .edit-form select{
@@ -270,7 +266,8 @@ input:focus{
     width: 100%;
     font-size: 26px;
     padding: 10px 20px;
-    color: rgb(133, 223, 255);
+    color: rgb(0, 145, 255);
+    
     margin-top: 10px;
 }
 .cross{
@@ -296,9 +293,160 @@ input:focus{
 .edit-button:active{
     transform:scale(0.95);
 }
-.outer-edit-div{
-    /* position: relative; */
+
+.statusP{
+    background-color: rgba(255, 113, 113, 0.522);
+    padding: 8px 15px;
+    font-size: 22px;
+    border-radius: 20px;
+    color: red;
 }
+.statusC{
+    background-color: rgba(46, 227, 49, 0.8);
+    padding: 8px 15px;
+    font-size: 22px;
+    border-radius: 20px;
+    color: rgb(3, 68, 10);
+}
+
+.purpose-display{   
+    /* background-color: yellowgreen; */
+
+    border: 2px solid rgba(63, 126, 251, 0.792) ;
+    padding: 2px 4px;
+    border-radius: 10px;
+}
+.card-left{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.card-right{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .task-manager {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .form {
+        width: 80%;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    html,
+    body {
+        align-items: flex-start;
+        padding: 20px 0;
+    }
+
+    .task-manager {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 32px;
+        padding: 20px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .display {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left,
+    .middle,
+    .right {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form {
+        width: 90%;
+    }
+
+    .form input,
+    .form select,
+    .submit {
+        font-size: 18px;
+    }
+
+    .card {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .card-left,
+    .card-right {
+        width: 100%;
+    }
+
+    .card-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card-right {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
+    .btn {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .completed,
+    .edit,
+    .delete {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .statusP,
+    .statusC {
+        font-size: 14px;
+    }
+
+    .edit-form {
+        width: 90%;
+        top: 20%;
+    }
+
+    .cross {
+        top: 15%;
+        left: 90%;
+        font-size: 28px;
+    }
+}
+
 
 
 
