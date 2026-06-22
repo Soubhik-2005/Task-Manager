@@ -1,4 +1,4 @@
-const form = document.querySelector("form");
+const form = document.querySelector(".form");
 const taskInput = document.querySelector("#task-input");
 const dropdown = document.querySelector("#dropdown");
 const cardArea = document.querySelector(".card-area");
@@ -7,7 +7,6 @@ const edit = document.querySelector(".edit");
 const delete_ = document.querySelector(".delete");
 const displayParent = document.querySelector(".displayParent");
 const outerEditDiv = document.querySelector(".outer-edit-div");
-const cross = document.querySelector
 
 let task=JSON.parse(localStorage.getItem("task")) || [];
 
