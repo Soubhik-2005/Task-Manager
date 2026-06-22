@@ -1,51 +1,100 @@
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} 
 
 html,body{
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(125, 167, 190, 0.432);
+    /* position: relative; */
     /* background-color: blueviolet; */
     /* padding: 20px 10px; */
 
 }
 .task-manager{
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-    min-height: 100%;
-    width: 100%;
-    background-color: rgb(202, 202, 202);
+    
+    min-height: 80%;
+    width: 50%;
+    background-color: rgba(243, 233, 233, 0.471);
     gap: 10px;
-    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    /* padding: 40px; */
+}
+h1{
+    background-color: rgb(215, 249, 250);
+    color:rgb(0, 114, 118) ;
+    text-align: center;
+    padding: 30px;
+    font-size: 60px;
+        
+
 }
 
 .displayParent{
-    height: 30%;
-    width: 65%;
+    height: 50%;
+    width: 100%;
 }
 
 .display{
     height: 100%;
     width: 100%;
-    background-color: rgb(232, 223, 223);
+    /* background-color: rgb(232, 223, 223); */
     display: flex;
-    justify-content: space-between;
-    padding: 25px 35px;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* padding: 25px 35px; */
     border-radius:10px;
     box-shadow: 10px;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+p{
+    font-size: 30px;
 }
 .left{
     text-align: center;
+    background-color: aqua;
+    height: 80%;
+    width: 30%;
+    padding: 20px 30px;
+    border-radius: 10px;
 }
 .middle{
     text-align: center;
+    background-color: aqua;
+    height: 80%;
+    width: 30%;
+    padding: 20px 18px;
+    border-radius: 10px;
+    
+}
+.middle p{
+    font-size: 29px;
 }
 .right{
     text-align: center;
+    background-color: aqua;
+    height: 80%;
+    width: 30%;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.form-div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .form{
@@ -54,10 +103,38 @@ html,body{
     /* align-items: center; */
     flex-direction: column;
     gap: 15px;
-    text-align: left;
+    text-align: center;
     width: 50%;
     height: 70%;
     /* background-color: beige; */
+}
+.form input{
+    height: 80%;
+    width: 100%;
+    font-size: 28px;
+    padding: 0px 10px;
+    
+}
+
+input::placeholder{
+    padding: 0px 10px;
+    color: rgb(133, 223, 255);
+}
+
+.form select{
+    height: 100%;
+    width: 100%;
+    font-size: 26px;
+    padding: 10px 20px;
+    color: rgb(133, 223, 255);
+}
+
+select option{
+    color: rgb(133, 223, 255);
+    padding: 10px 20px;
+    font-size: 28px;
+
+    
 }
 
 .flex{
@@ -67,42 +144,57 @@ html,body{
 }
 .card-area{
     min-height: 20%;
-    width: 65%;
+    width: 100%;
+    
+    text-align: center;
+    margin-top: 10px;
 }
 .card{
-    height: 20%;
+    height: 30%;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 8px 20px;
+    padding: 20px 30px;
     align-items: center;
     background-color: rgb(161, 225, 225);
     border-radius: 5px;
-
     margin-top: 10px;
 
 }
 .btn{
     display: flex;
     gap: 20px;
+    
+}
+.status{
+    font-size: 28px;
 }
 .completed{
     background-color: rgb(72, 246, 72);
     padding: 8px 10px;
     border-radius: 10px;
     border: none;
+    font-size: 20px;
 }
 .edit{
      background-color: rgb(246, 246, 72);
     padding: 8px 10px;
     border-radius: 10px;
     border: none;
+    font-size: 20px;
+
 }
 .delete{
      background-color: rgb(246, 72, 72);
     padding: 8px 10px;
     border-radius: 10px;
     border: none;
+    font-size: 20px;
+
+}
+
+.card p{
+    font-size: 28px;
 }
 
 #task-input{
@@ -124,16 +216,89 @@ select{
     padding: 10px 20px;
     background-color: rgb(165, 231, 255); 
     border: none;  
-    border-radius: 5px; 
+    border-radius: 5px;
+    font-size: 28px; 
+    color:rgb(0, 114, 118) ;
+    
 }
 
 select:focus{
     outline: none;
 }
 input:focus{
-    outline: none;
+    outline: 5px solid rgb(133, 223, 255);
 }
 
 .submit:active{
     transform:scale(0.9);
 }
+
+.edit-form{
+    /* background-color: yellow; */
+    /* display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 29%;
+}
+
+.edit-div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(9, 67, 73, 0.557);
+    position: absolute;
+    top:0%;
+    left: 0%;
+    
+}
+.edit-form input{
+    height: 8%;
+    width: 100%;
+    font-size: 28px;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+}
+
+.edit-form select{
+    height: 8%;
+    width: 100%;
+    font-size: 26px;
+    padding: 10px 20px;
+    color: rgb(133, 223, 255);
+    margin-top: 10px;
+}
+.cross{
+    position: absolute;
+    top: 24%;
+    left: 73%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.edit-button{
+    height: 5%;
+    width: 100%;
+    margin-top: 20px;
+    background-color: yellow;
+    border: none;
+    font-size:20px ;
+    border-radius: 10px;
+
+}
+
+.edit-button:active{
+    transform:scale(0.95);
+}
+.outer-edit-div{
+    /* position: relative; */
+}
+
+
+
